@@ -1,0 +1,140 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+  --clr-blue1: #98bbc8;
+  --clr-blue2: #4782b5;
+  --clr-blue3: #2b4d6d;
+  --clr-white: #fff;
+  --clr-black: #000;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+input[type] {
+  border: none;
+  display: inline-block;
+  outline: none;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  background-color: var(--clr-blue2);
+}
+
+.wrapper {
+  width: 280px;
+  height: auto;
+  padding: 25px;
+  border-radius: 5px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: var(--clr-blue3);
+  box-shadow: 0 0 3px var(--clr-black);
+}
+
+.wrapper h2 {
+  color: var(--clr-white);
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.wrapper form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  position: relative;
+}
+
+form .input-group {
+  border-bottom: 1px solid var(--clr-white);
+  position: relative;
+  transition: all .3s;
+}
+
+form .input-group.active {
+  border-bottom-color: var(--clr-blue1);
+}
+
+form input {
+  width: 100%;
+  padding: 10px 0;
+  background-color: transparent;
+}
+
+.input-group input {
+  position: relative;
+  z-index: 1;
+  color: var(--clr-white);
+}
+
+.input-group .place-holder {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  color: var(--clr-white);
+  font-size: 12px;
+  transform: translatey(-50%);
+}
+
+.place-holder span {
+  z-index: -1;
+  transition: all .2s ease-in;
+}
+
+.email span.active,
+.password span.active {
+  color: var(--clr-blue1);
+  transform: translateY(-20px);
+}
+
+.place-holder span:first-child {
+  text-transform: uppercase;
+}
+
+.input-control input {
+  border-radius: 5px;
+  background-color: var(--clr-blue1);
+  color: var(--clr-black);
+  cursor: pointer;
+  text-transform: capitalize;
+  transition: all .3s;
+}
+
+.input-control input:hover {
+  background-color: var(--clr-blue2);
+}
+
+.wrapper p {
+  color: var(--clr-white);
+  font-size: 13px;
+}
+
+.wrapper p::first-letter {
+  text-transform: uppercase;
+}
+
+.wrapper a {
+  color: var(--clr-blue1);
+  text-transform: capitalize;
+  transition: all .3s;
+}
+
+.wrapper a:hover {
+  color: var(--clr-blue2);
+  text-decoration: underline;
+}
